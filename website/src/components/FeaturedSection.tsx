@@ -1,6 +1,5 @@
 "use client";
 import { useRef } from "react";
-import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "./ProductCard";
 import type { Product } from "@/lib/supabase";
@@ -49,16 +48,9 @@ export default function FeaturedSection({ products, title = "Featured Products",
           className="flex gap-4 overflow-x-auto no-scrollbar pb-4 snap-x"
         >
           {products.map((product, i) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="flex-none w-[220px] snap-start"
-            >
+            <div key={product.id} className="flex-none w-[220px] snap-start">
               <ProductCard product={product} index={i} />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

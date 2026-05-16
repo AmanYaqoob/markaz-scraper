@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import type { Category } from "@/lib/supabase";
 
 const CATEGORY_EMOJIS: Record<string, string> = {
@@ -31,29 +30,22 @@ export default function CategoryGrid({ categories }: { categories: Category[] })
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-        {categories.map((cat, i) => (
-          <motion.div
+        {categories.map((cat) => (
+          <Link
             key={cat.id}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: (i % 12) * 0.04 }}
+            href={`/category/${encodeURIComponent(cat.name)}`}
+            className="group block card-dark p-4 text-center hover:bg-white/5 transition-colors duration-200"
           >
-            <Link
-              href={`/category/${encodeURIComponent(cat.name)}`}
-              className="group block card-dark p-4 text-center transition-all duration-300 hover:scale-105"
-            >
-              <div className="text-3xl mb-3 transition-transform duration-300 group-hover:scale-110">
-                {CATEGORY_EMOJIS[cat.name] ?? "🛍️"}
-              </div>
-              <p className="text-xs font-semibold text-white/70 group-hover:text-white transition-colors leading-tight">
-                {cat.name}
-              </p>
-              {cat.product_count > 0 && (
-                <p className="text-[10px] text-white/25 mt-1">{cat.product_count} items</p>
-              )}
-            </Link>
-          </motion.div>
+            <div className="text-3xl mb-3">
+              {CATEGORY_EMOJIS[cat.name] ?? "🛍️"}
+            </div>
+            <p className="text-xs font-semibold text-white/70 group-hover:text-white transition-colors leading-tight">
+              {cat.name}
+            </p>
+            {cat.product_count > 0 && (
+              <p className="text-[10px] text-white/25 mt-1">{cat.product_count} items</p>
+            )}
+          </Link>
         ))}
       </div>
     </section>
