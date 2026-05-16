@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
 
   // Enrich order items with SKU + markaz_url from products table
   const orders = data ?? [];
-  const productIds = [...new Set(orders.flatMap((o: { items: { id: string }[] }) => o.items.map((i: { id: string }) => i.id).filter(Boolean)))];
+  const productIds = Array.from(new Set(orders.flatMap((o: { items: { id: string }[] }) => o.items.map((i: { id: string }) => i.id).filter(Boolean))));
 
   let skuMap: Record<string, { sku: string | null; markaz_url: string | null }> = {};
   if (productIds.length) {
