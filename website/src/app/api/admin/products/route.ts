@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
       adminSupabase.from("products").select("id", { count: "exact", head: true }).eq("is_featured", true),
       adminSupabase.from("products").select("id", { count: "exact", head: true }).eq("availability", "instock"),
     ]);
-    const categories = [...new Set<string>((catRes.data ?? []).map((r: { category_name: string }) => r.category_name).filter(Boolean))].sort();
+    const categories = Array.from(new Set<string>((catRes.data ?? []).map((r: { category_name: string }) => r.category_name).filter(Boolean))).sort();
     return NextResponse.json({
       categories,
       featuredCount: featRes.count ?? 0,
