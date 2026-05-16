@@ -22,15 +22,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand */}
         <div className="md:col-span-2">
-          <Image src="/logo.png" alt="DROPSHOP" width={140} height={42} className="h-10 w-auto mb-6" />
+          <Image src="/nr2prwpftxrmr0cy5patyca2d0_preview_0-ezremove.png" alt="DROPSHOP" width={260} height={80} className="h-16 w-auto mb-6 object-contain" />
           <p className="text-sm text-white/40 leading-relaxed max-w-sm">
             Pakistan's premium dropshipping store. Trending products delivered fast — style, quality, and value in every order.
           </p>
           <div className="flex gap-4 mt-6">
-            <a href="https://facebook.com/DROPSHOP.PK" target="_blank" rel="noopener" className="p-2 border border-[#222] text-white/40 hover:text-white hover:border-white/30 transition-colors">
+            <a href="https://www.facebook.com/share/1JXdczjfCw/" target="_blank" rel="noopener" className="p-2 border border-[#222] text-white/40 hover:text-white hover:border-white/30 transition-colors">
               <Facebook size={16} />
             </a>
-            <a href="https://instagram.com/DROPSHOP._.PK" target="_blank" rel="noopener" className="p-2 border border-[#222] text-white/40 hover:text-white hover:border-white/30 transition-colors">
+            <a href="https://www.instagram.com/dropshop._.pk?igsh=MTM2MHdlaTJ3ZnVvbQ==" target="_blank" rel="noopener" className="p-2 border border-[#222] text-white/40 hover:text-white hover:border-white/30 transition-colors">
               <Instagram size={16} />
             </a>
           </div>
