@@ -5,5 +5,5 @@ google-genai
 schedule==1.2.2
 python-dotenv==1.0.1
 requests==2.32.3
-supabase==2.5.0
+supabase>=2.9.0
 certifi
