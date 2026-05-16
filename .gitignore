@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+.env.local
+
+# Node
+website/node_modules/
+website/.next/
+website/.env.local
+website/.env*.local
+
+# Scraper output
+output/images/
+logs/
+
+# Mac
+.DS_Store
