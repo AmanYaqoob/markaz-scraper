@@ -1,9 +1,7 @@
 "use client";
-import { useState, useEffect, createContext, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Lock } from "lucide-react";
-
-const AuthCtx = createContext<string>("");
-export const useAdminPassword = () => useContext(AuthCtx);
+import { AuthCtx } from "./auth-context";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [password, setPassword] = useState("");

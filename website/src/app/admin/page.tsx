@@ -7,7 +7,7 @@ import {
   ShoppingBag, Package, Clock, Truck, CheckCircle, XCircle,
   Plus, X, ImagePlus, Trash2, Pencil, Copy, ClipboardCheck,
 } from "lucide-react";
-import { useAdminPassword } from "./layout";
+import { useAdminPassword } from "./auth-context";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 type Product = {
