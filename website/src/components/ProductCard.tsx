@@ -7,7 +7,7 @@ import { ShoppingBag, Eye } from "lucide-react";
 import { useCart } from "./CartProvider";
 import type { Product } from "@/lib/supabase";
 
-export default function ProductCard({ product }: { product: Product; index?: number }) {
+export default function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   const { add } = useCart();
   const router = useRouter();
   const [hovered, setHovered] = useState(false);
@@ -25,7 +25,7 @@ export default function ProductCard({ product }: { product: Product; index?: num
   };
 
   return (
-    <div>
+    <div className="animate-fade-up" style={{ animationDelay: `${Math.min(index * 0.05, 0.4)}s` }}>
       <Link href={`/product/${product.id}`} className="group block">
         <div
           className="relative overflow-hidden bg-[#141414] aspect-square mb-3"

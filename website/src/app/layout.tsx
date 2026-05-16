@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description:
     "Pakistan's premium online store. Shop trending products across 33+ categories — fashion, electronics, cosmetics, accessories & more.",
   keywords: ["dropshop", "online shopping pakistan", "fashion", "electronics", "cosmetics"],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     siteName: "DROPSHOP",
     type: "website",

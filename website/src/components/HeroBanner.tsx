@@ -26,18 +26,18 @@ export default function HeroBanner() {
 
       <div className="relative flex-1 max-w-7xl mx-auto px-6 flex flex-col items-center justify-center pt-12 pb-24 text-center">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-white/50 mb-4">
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-white/50 mb-4 animate-fade-in">
             Pakistan's Premium Store
           </p>
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-black uppercase leading-none tracking-tight text-white mb-2">
-            <span className="block">Style.</span>
-            <span className="block text-white/40">Quality.</span>
-            <span className="block">You.</span>
+            <span className="block animate-fade-up stagger-1">Style.</span>
+            <span className="block text-white/40 animate-fade-up stagger-2">Quality.</span>
+            <span className="block animate-fade-up stagger-3">You.</span>
           </h1>
-          <p className="text-white/60 text-sm md:text-base mt-6 mb-10 leading-relaxed">
+          <p className="text-white/60 text-sm md:text-base mt-6 mb-10 leading-relaxed animate-fade-up stagger-4">
             Discover thousands of trending products across 33+ categories — curated daily from top suppliers.
           </p>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center animate-fade-up stagger-5">
             <Link href="/categories" className="btn-primary">
               <ShoppingBag size={16} />
               Shop Now

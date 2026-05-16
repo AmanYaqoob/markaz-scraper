@@ -22,7 +22,7 @@ export default function FeaturedSection({ products, title = "Featured Products",
   return (
     <section className="py-20 bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="mb-10 flex items-end justify-between">
+        <div className="mb-10 flex items-end justify-between animate-fade-up">
           <div>
             <p className="section-subtitle mb-2">{subtitle}</p>
             <h2 className="section-title">{title}</h2>
